@@ -1,0 +1,36 @@
+#:import Factory kivy.factory.Factory
+
+
+<InputLayout>
+
+
+
+    TextInput:
+        id:symbolnamein
+        pos_hint: {"x":0.05, "y":0.9}
+        size_hint: (0.3, 0.05)
+        multiline: False
+        text: "Add Symbol Name"
+
+    TextInput:
+        id:symbolin
+        pos_hint: {"x":0.05, "y":0.85}
+        size_hint: (0.3, 0.05)
+        multiline: False
+        text: "Add Symbol"
+
+    Button:
+        id: addsymbolbtn
+        text:"Add Symbol"
+        size_hint: (0.15, 0.05)
+        pos_hint:{"x":0.1, "y":0.775}
+        on_press: app.AddSymbol()
+
+
+
+
+    TextInput:
+        id: textinput
+        pos_hint:{"x":0.45, 'y':0}
+        size_hint: (0.5, 0.9)
+        on_text: app.getinput()
